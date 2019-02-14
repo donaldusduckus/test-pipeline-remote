@@ -1,14 +1,16 @@
-# This is a sample build configuration for Other.
-# Check our guides at https://confluence.atlassian.com/x/5Q4SMw for more examples.
-# Only use spaces to indent your .yml configuration.
-# -----
-# You can specify a custom docker image from Docker Hub as your build environment.
+# <company> BitBucket Pipeline: Pushes stuff to remote customer git repo
 image: atlassian/default-image:2
 
 pipelines:
-  default:
+  branches:
+    master:
     - step:
         script:
           - echo "Push to master remote ..."
           - git push $remotegit master
           - echo "*done*"
+
+  default:
+    - step:
+        script:
+          - echo "Nothing to do for now"
