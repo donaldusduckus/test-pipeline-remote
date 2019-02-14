@@ -10,5 +10,5 @@ pipelines:
     - step:
         script:
           - echo "Push to master remote ..."
-          - git push https://github.com/donaldusduckus/test-pipeline-remote.git master
+          - git push $remotegit master
           - echo "*done*"
