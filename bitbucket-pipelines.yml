@@ -1,5 +1,6 @@
 # <company> BitBucket Pipeline: Pushes stuff to remote customer git repo
-image: atlassian/default-image:2
+# if you specify no image, latest "atlassian/default-image:latest" will be used, see https://confluence.atlassian.com/bitbucket/use-docker-images-as-build-environments-792298897.html
+# image: atlassian/default-image:2
 
 pipelines:
   branches:
