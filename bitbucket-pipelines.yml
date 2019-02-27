@@ -9,7 +9,7 @@ pipelines:
         script:
           - echo "Push to master remote ..."
           - echo "SSH ..."
-          - ssh $ssh_user_host $ssh_params -t 'echo "Starting"; uname -a; touch /tmp/bitbucket-pipeline; echo "*done*"'
+          - ssh $ssh_user_host $ssh_params 'bash -s' < deploy.sh
           - echo "SSH done"
           - git push $remotegit master
           - echo "*done*"
