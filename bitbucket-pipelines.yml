@@ -8,6 +8,9 @@ pipelines:
     - step:
         script:
           - echo "Push to master remote ..."
+          - echo "SSH ..."
+          - ssh -p 33 bitbucket@denbh000.dyn.root1.de -t 'echo "Starting"; uname -a; touch /tmp/bitbucket-pipeline; echo "*done*"'
+          - echo "SSH done"
           - git push $remotegit master
           - echo "*done*"
 
